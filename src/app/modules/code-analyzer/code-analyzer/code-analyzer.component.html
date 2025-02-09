@@ -1,0 +1,29 @@
+<div class="min-h-screen flex flex-col items-center justify-center bg-black p-6">
+    <h1 class="text-4xl font-bold text-blue-600 mb-6">CodeVision - AI Code Analyzer</h1>
+  
+    <!-- Code Input Container -->
+    <div class="w-full max-w-3xl bg-[#292a2d] shadow-lg rounded-lg p-6">
+      <label for="codeInput" class="block text-lg font-semibold text-[#deb887] mb-2">Paste Your Code:</label>
+      <textarea id="codeInput"
+  class="w-full h-40 p-4  rounded-md bg-[#7f8595] focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-white"
+  placeholder="Enter your code here..."
+></textarea>
+  
+      <div class="flex justify-end items-center mt-4">
+        
+        <!-- Analyze Button -->
+        <button id="analyzeBtn"
+          class="bg-blue-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md transition">
+          Analyze Code
+        </button>
+      </div>
+    </div>
+  
+    <!-- AI Analysis Output -->
+    <div id="outputContainer"
+      class="w-full max-w-3xl bg-white shadow-lg rounded-lg p-6 mt-6 hidden">
+      <h2 class="text-xl font-bold text-gray-700">AI Analysis:</h2>
+      <pre id="outputText" class="mt-2 p-4 bg-gray-100 text-sm rounded-md overflow-x-auto"></pre>
+    </div>
+  </div>
+  
