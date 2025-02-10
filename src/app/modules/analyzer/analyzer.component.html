@@ -1,0 +1,16 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-black p-6 space-y-8">
+    <h1 class="text-4xl font-bold text-blue-600 text-center m-2 mt-4">
+      CodeVision - AI Code Analyzer
+    </h1>
+  
+    <!-- Code Input Section -->
+    <div class="w-full max-w-3xl bg-gray-800 text-white  rounded-lg">
+      <app-code-analyzer></app-code-analyzer>
+    </div>
+  
+    <!-- AI Response Section -->
+    <div class="w-full max-w-3xl bg-gray-900 text-white p-6 rounded-lg " *ngIf="response.length > 0">
+      <app-response></app-response>
+    </div>
+  </div>
+  

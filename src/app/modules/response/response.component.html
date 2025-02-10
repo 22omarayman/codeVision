@@ -1,0 +1,16 @@
+<div class="max-w-3xl mx-auto bg-gray-900 text-white p-6 rounded-lg  space-y-6" >
+    <h2 class="text-2xl font-bold text-[#deb887] mb-4">AI Analysis</h2>
+  
+    <div *ngFor="let res of response" class="mb-6">
+      <!-- Explanation Section -->
+      <p class="text-lg font-semibold mb-2 text-yellow-400">Explanation:</p>
+      <p class="bg-gray-800 p-4 rounded-md text-gray-300">{{ res.explanation }}</p>
+  
+      <!-- Code Section -->
+      <p class="text-lg font-semibold mt-4 mb-2 text-yellow-400">Optimized Code:</p>
+      <pre class="bg-gray-700 text-green-400 p-4 rounded-md overflow-x-auto">
+        <code>{{ res.code }}</code>
+      </pre>
+    </div>
+  </div>
+  
