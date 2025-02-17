@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px; /* Set consistent width */
+  }
+  
+  /* Fixes extra space issue */
+  ::-webkit-scrollbar-track {
+    background: black; /* Set track to match background */
+    border-radius: 4px; /* Optional: Smooth edges */
+    margin-block: 2px; /* ✅ Adjusts space to remove gaps */
+  }
+  
+  /* Scrollbar Thumb (Draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background: #4a4a4a; /* Dark gray thumb */
+    border-radius: 4px; /* Smooth rounded edges */
+  }
+  
+  /* Hover Effect */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+  
+  
+  /* ✅ Fix the White Strip Below Scrollbar */
+  ::-webkit-scrollbar-corner {
+    background: black; /* Ensure the bottom right corner is also black */
+  }
+  
+/* Code Block Styling */
+.custom-scrollbar {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a4a black;
+}
+
+/* Add hover glow effect for interactivity */
+button:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+textarea {
+    resize: none;
+  }
+  
+  
