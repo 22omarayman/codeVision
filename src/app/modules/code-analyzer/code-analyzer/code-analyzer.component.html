@@ -17,7 +17,7 @@
 
     <div class="flex justify-end items-center mt-5">
       <!-- Analyze Button -->
-      <button id="analyzeBtn" (click)="analyzeCode()"
+      <button id="analyzeBtn" (click)="analyzeCodeStream()"
         class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md">
         Analyze Code
       </button>
@@ -32,7 +32,7 @@
       <!-- Explanation Section -->
       <p class="text-xl font-semibold mb-2 text-yellow-400">Explanation:</p>
       <p class="bg-gray-800 p-5 rounded-lg text-gray-300 whitespace-pre-line border border-gray-700 shadow-md">
-        {{ res.explanation }}
+        <!-- {{ res.explanation }} -->
       </p>
 
       <!-- Code Section with Language Label -->
@@ -40,11 +40,11 @@
       <div class="relative">
         <!-- Language Label (Refined Placement) -->
         <div class="absolute -top-3 left-4 px-4 py-1 rounded-t-md text-white font-semibold uppercase text-sm bg-[#b22222] shadow-md">
-          {{ res.language }}
+          <!-- {{ res.language }} -->
         </div>
         <!-- Code Block -->
         <pre class="bg-black text-green-400 p-5 rounded-lg overflow-x-auto whitespace-pre custom-scrollbar border border-gray-700 shadow-lg">
-          <code class="block" [innerText]="res.code"></code>
+          <!-- <code class="block" [innerText]="res.code"></code> -->
         </pre>
       </div>
     </div>
