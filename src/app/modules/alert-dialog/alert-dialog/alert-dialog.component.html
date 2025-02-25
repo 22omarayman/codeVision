@@ -1,0 +1,22 @@
+<div class="bg-gray-900 text-white p-6 rounded-lg shadow-lg border border-gray-700 w-full max-w-md">
+    <!-- Dialog Title -->
+    <h2 class="text-2xl font-bold text-[#b8860b] border-b border-gray-700 pb-2">
+      {{ data.title }}
+    </h2>
+  
+    <!-- Dialog Content -->
+    <div class="mt-4">
+      <p class="text-[#fffaf0] text-lg">
+        {{ data.message }}
+      </p>
+    </div>
+  
+    <!-- Dialog Actions -->
+    <div class="flex justify-end mt-6">
+      <button (click)="closeDialog()"
+        class="hover:bg-[#a52a2a] bg-[#bf1737] text-[white] font-bold py-2 px-5 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md">
+        OK
+      </button>
+    </div>
+  </div>
+  
