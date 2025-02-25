@@ -25,7 +25,12 @@
   </div>
 
   <!-- AI Response Section (Shown Only If Response Exists) -->
-  <div *ngIf="response.length > 0" class="w-full max-w-3xl bg-gray-900 text-white p-6 rounded-lg shadow-lg border border-gray-700">
+  <div  *ngIf="
+  response.length > 0 &&
+  (response[0]?.explanation?.trim() ||
+    response[0]?.language?.trim() ||
+    response[0]?.code?.trim())
+" class="w-full max-w-3xl bg-gray-900 text-white p-6 rounded-lg shadow-lg border border-gray-700">
     <h2 class="text-3xl font-bold text-[#deb887] mb-5 border-b border-gray-700 pb-3">AI Analysis</h2>
 
     <div *ngFor="let res of response" class="mb-8">
@@ -43,8 +48,11 @@
           {{ res.language }}
         </div>
         <!-- Code Block -->
-        <pre class="bg-black text-green-400 p-5 rounded-lg overflow-x-auto whitespace-pre custom-scrollbar border border-gray-700 shadow-lg">
-          <code class="block" [innerText]="res.code"></code>
+        <pre
+          id="scrollable"
+          class="bg-black text-green-400 p-5 rounded-lg overflow-y-auto overflow-x-auto whitespace-pre custom-scrollbar border border-gray-700 shadow-lg max-h-96"
+        >
+          <code class="block">{{ res.code }}</code>
         </pre>
       </div>
     </div>
